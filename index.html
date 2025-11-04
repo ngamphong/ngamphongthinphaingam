@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ngamphong Thinphaingam (Dragon) — Bot & Automation Developer</title>
+  <meta name="description" content="Ngamphong Thinphaingam (Dragon) — สร้างบอทเกม บอทเว็บ และระบบอัตโนมัติ | MySQL, PHP, Python" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff;
+      --surface:#f6f7f8;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --text:#0b0b0b;
+      --accent:#222222; /* secondary chosen */
+      --primary:#0f766e; /* subtle accent if needed */
+      --radius:14px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Thai UI', 'Sarabun', sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.45}
+    .container{max-width:980px;margin:36px auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{
+      width:72px;height:72px;border-radius:14px;
+      display:flex;align-items:center;justify-content:center;
+      background:linear-gradient(135deg,#e6fffb,#c9f7ee);
+      color:var(--accent);font-weight:800;font-size:20px;
+      box-shadow:0 6px 20px rgba(3,102,90,0.06);
+    }
+    nav{display:flex;gap:14px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;padding:8px;border-radius:10px}
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;padding:28px;border-radius:18px;background:linear-gradient(180deg,#fff,#fbfcfd);box-shadow:0 18px 60px rgba(15,20,20,0.04)}
+    .kicker{display:inline-block;background:#f1f5f4;color:var(--accent);padding:8px 12px;border-radius:999px;font-weight:700;font-size:13px}
+    .hero h1{margin:12px 0 8px;font-size:34px;line-height:1.02;font-weight:800;letter-spacing:-0.4px}
+    .hero .tag{margin:0;color:var(--muted);font-size:15px}
+    .hero .actions{display:flex;gap:12px;margin-top:18px}
+    .btn{padding:12px 16px;border-radius:12px;border:0;font-weight:800;cursor:pointer}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-ghost{background:transparent;border:1px solid rgba(15,20,20,0.06);color:var(--accent)}
+    /* profile card */
+    .profile-card{width:100%;max-width:360px;border-radius:14px;padding:20px;background:var(--card);box-shadow:0 14px 40px rgba(10,30,30,0.04);text-align:center}
+    .avatar{width:96px;height:96px;border-radius:18px;margin:0 auto;background:linear-gradient(135deg,#c6fff0,#9df3dd);display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:900;font-size:26px}
+    .meta h3{margin:12px 0 4px;font-size:18px}
+    .meta p{margin:4px 0;color:var(--muted);font-size:13px}
+    /* Sections */
+    section{margin-top:28px}
+    .section-title{font-size:18px;margin-bottom:12px;font-weight:700;color:var(--accent)}
+    .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 10px 30px rgba(10,30,30,0.03)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .caps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .cap-item{display:flex;gap:12px;align-items:flex-start}
+    .icon{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,#f0fffb,#d8f9ef);display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--accent)}
+    .small{color:var(--muted);font-size:14px}
+    /* Work items */
+    .works{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .work{padding:16px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfdfe);box-shadow:0 12px 36px rgba(12,34,34,0.03)}
+    .work h5{margin:6px 0 6px;font-size:16px}
+    .meta-line{font-size:13px;color:var(--muted);margin-top:8px}
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
+    .form input,.form textarea{width:100%;padding:10px;border-radius:10px;border:1px solid #eef2f3;font-size:14px;margin-top:8px}
+    .form button{margin-top:10px}
+    /* Footer */
+    footer{margin-top:36px;padding:24px 0;text-align:center;color:var(--muted);font-size:13px}
+    /* responsive */
+    @media (max-width:980px){.hero{grid-template-columns:1fr;}.contact-grid{grid-template-columns:1fr}.grid-3,.works,.caps{grid-template-columns:1fr 1fr}.avatar{width:84px;height:84px}}
+    @media (max-width:520px){.caps,.works{grid-template-columns:1fr}.hero h1{font-size:28px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <div class="brand">
+        <div class="logo"><img src="" alt=""></div>
+        <div>
+          <div style="font-weight:800">Ngamphong Thinphaingam</div>
+          <div style="font-size:13px;color:var(--muted)">Bot & Automation Developer — MySQL • PHP • Python</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#capabilities">Skills</a>
+        <a href="#work">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <div class="kicker">Automation • Bots • Backend</div>
+        <h1 id="hero-title">Ngamphong Thinphaingam</h1>
+        <p class="tag">I build automation systems and bots that run in the game and are used to retrieve various data related to the backend.</p>
+
+        <div class="hero-brief" style="margin-top:18px">
+          <p class="small">สร้างบอทเกม บอทเว็บดึงข้อมูล และระบบอัตโนมัติพร้อม deploy ใช้งานจริง และ Backend</p>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start a project</button>
+          <button class="btn btn-ghost" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})">See portfolio</button>
+        </div>
+      </div>
+
+      <aside>
+        <div class="profile-card">
+          <div class="avatar">D</div>
+          <div class="meta">
+            <h3>Ngamphong Thinphaingam</h3>
+            <p class="small">Bot Developer • Automation Engineer • Backend</p>
+            <p class="small">Email: <a href="mailto:you@mail.example">ngamphongthinphaingam@gmail.com</a></p>
+          </div>
+          <div style="margin-top:12px" class="small">Available for freelance, internship, and part-time projects.</div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-title">About Me</div>
+      <div class="card">
+        <p style="margin:0;font-size:15px;color:var(--muted);line-height:1.7">
+          ผมเป็นนักศึกษาชั้นปีที่ 2 สาขานวัตกรรมธุรกิจดิจิทัล (SPU ขอนแก่น) ที่ชื่นชอบการพัฒนา ด้านการสร้างระบบอัตโนมัติและบอท (Game Bot / Web Bot) <strong>Python, PHP, MySQL</strong> และสามารถทำงานกับ Chrome automation, web scraping</p>
+      </div>
+    </section>
+
+    <!-- CAPABILITIES -->
+    <section id="capabilities">
+      <div class="section-title">สิ่งที่ผมทำได้</div>
+      <div class="caps">
+        <div class="card cap-item">
+          <div class="icon">BOT</div>
+          <div>
+            <h4 style="margin:0 0 6px">เขียนบอทเกม</h4>
+            <div class="small">พัฒนา bot ช่วยตีมอนสำหรับ Ragnarok Landverse / บอทตกปลาใน FiveM / บอทควบคุมเกมผ่าน Chrome automation</div>
+          </div>
+        </div>
+
+        <div class="card cap-item">
+          <div class="icon">WEB</div>
+          <div>
+            <h4 style="margin:0 0 6px">บอทเว็บไซต์</h4>
+            <div class="small">Auto post • auto comment • auto delete comment • ดึงข้อมูลสินค้า (Lazada scraping & aggregation)</div>
+          </div>
+        </div>
+
+        <div class="card cap-item">
+          <div class="icon">CODE</div>
+          <div>
+            <h4 style="margin:0 0 6px">สามารถเขียนโปรแกรมได้หลายภาษา</h4>
+            <div class="small">MySQL · PHP · Python (ทำงานจริงและ Deploy ได้)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK / CASE STUDIES -->
+    <section id="work">
+      <div class="section-title">Selected Works (ตัวอย่างผลงาน)</div>
+      <div class="works">
+
+        <div class="work">
+          <h5>Ragnarok Landverse — Combat Bot</h5>
+          <div class="meta-line"><strong>Problem:</strong> ต้องการให้ตัวละครใน Ragnarok Landverse ฟาร์มมอนแบบอัตโนมัติ เดินเอง หามอนเอง ตีเอง โดยไม่ต้องมานั่งคุมตลอด</div>
+          <div class="meta-line"><strong>Approach:</strong> ตรวจจับสี/พิกเซลของมอนแต่ละชนิดเพื่อระบุตำแหน่งจริงบนเกม จากนั้นสุ่มตำแหน่งเดินแบบเป็นธรรมชาติ หากพบมอน → คลิกโจมตีอัตโนมัติ พร้อมตรวจเช็คสถานะว่าตายหรือยัง ถ้าตายแล้วค่อยเริ่มหาตัวใหม่</div>
+          <div class="meta-line"><strong>Result:</strong> บอทสามารถฟาร์มมอนให้แบบ Auto เต็มระบบ เดินเอง ตีเอง ไล่วงจรฟาร์มได้ต่อเนื่อง ประหยัดเวลา ได้ผลลัพธ์จริง ไม่ต้องคุมตลอดเอง</div>
+        </div>
+
+        <div class="work">
+          <h5>FiveM — Fishing Bot</h5>
+          <div class="meta-line"><strong>Problem:</strong> ทำบอทตกปลาอัตโนมัติสำหรับเซิร์ฟเวอร์เกมหรืออีเว้นตกปลาต่างๆ</div>
+          <div class="meta-line"><strong>Approach:</strong> ทำงานแบบตรวจเช็คก่อนสั่งงานเสมอ ถ้าเจอเงื่อนไขตรงจริงค่อยกดสั่ง ไม่สุ่มกดมั่ว ทำให้บอททำงานแม่นยำและเสถียรใช้งานได้จริง</div>
+          <div class="meta-line"><strong>Result:</strong> บอทกดให้เองแบบแม่นยำ ทำงานแทนเราได้ยาว ๆ ลดงานจำเจ ประหยัดเวลา และได้ผลลัพธ์จริงในเกม</div>
+        </div>
+
+        <div class="work">
+          <h5>Web Bot — Lazada Scraper & Auto Poster</h5>
+          <div class="meta-line"><strong>Problem:</strong> ดึงข้อมูลสินค้าจาก Lazada แบบอัตโนมัติ ทั้งชื่อ รูป ราคา ลิงก์ รีวิว โดยไม่ต้องกดไล่เปิดทีละสินค้าเอง</div>
+          <div class="meta-line"><strong>Approach:</strong> ใช้การตรวจจับ element ตาม Xpath ในหน้าเว็บแบบเฉพาะจุด และดึงข้อมูลทุก field ที่ต้องใช้ จากนั้นจัดรูปแบบให้อยู่ใน Dataframe แล้ว export เป็นไฟล์ Excel พร้อมใช้งานได้ทันที</div>
+          <div class="meta-line"><strong>Result:</strong> ได้ Dataset ของสินค้าแบบรวดเร็ว อัตโนมัติ ลดเวลาทำงานไปมาก สามารถนำไปทำ Research / วิเคราะห์สินค้า / ทำ Automation ต่อได้เลย</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-title">Contact</div>
+      <div class="card contact-grid">
+        <div>
+          <form id="contactForm" class="form">
+            <label class="small">ชื่อ</label>
+            <input name="name" placeholder="ชื่อของคุณ" required>
+
+            <label class="small">อีเมล</label>
+            <input name="email" type="email" placeholder="you@mail.example" required>
+
+            <label class="small">ข้อความ / สั้นๆ โปรเจกต์</label>
+            <textarea name="message" placeholder="สรุปโปรเจกต์หรือคำถามสั้น ๆ" rows="6" required></textarea>
+
+            <div style="display:flex;gap:10px">
+              <button class="btn btn-primary" type="submit">ส่งข้อความ</button>
+              <button class="btn btn-ghost" type="button" onclick="location.href='mailto:you@mail.example'">ส่งอีเมล</button>
+            </div>
+          </form>
+        </div>
+
+        <aside style="max-width:320px">
+          <div style="margin-bottom:12px">
+            <div style="font-weight:800">ช่องทางอื่น</div>
+            <div class="small" style="margin-top:6px">LINE: <strong>dragon.seilah</strong></div>
+            <div class="small">GitHub: <a href="#" style="color:var(--primary)">github.com/yourname</a></div>
+          </div>
+
+          <div class="card">
+            <div style="font-weight:700">Availability</div>
+            <div class="small" style="margin-top:8px">-----</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Ngamphong Thinphaingam (Dragon) — Bot & Automation Developer • Built for portfolio & hiring
+    </footer>
+
+  </div>
+
+  <script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // contact form demo (client-side only)
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const f = e.target;
+      // simple validation already done by required attributes
+      alert('ข้อความส่งเรียบร้อย! ผมจะติดต่อกลับทางอีเมลครับ (ตัวอย่าง)');
+      f.reset();
+    });
+
+    // smooth nav
+    document.querySelectorAll('nav a').forEach(a => {
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        const id = this.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+  </script>
+</body>
+</html>
